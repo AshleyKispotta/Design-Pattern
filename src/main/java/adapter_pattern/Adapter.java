@@ -52,6 +52,18 @@ class WebDriverAdapter implements WebDriver {
 
 public class Adapter {
 	public static void main(String[] args) {
-	
+		ChromeDriver chromeDriver = new ChromeDriver();
+		chromeDriver.getElement();
+		chromeDriver.selectElement();
+		System.err.println();
+		
+		IEDriver ieDriver = new IEDriver();
+		ieDriver.findElement();
+		ieDriver.clickElement();
+		System.err.println();
+		
+		WebDriver webDriver = new WebDriverAdapter(ieDriver);
+		webDriver.getElement();
+		webDriver.selectElement();
 	}
 }
